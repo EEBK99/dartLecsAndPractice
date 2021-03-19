@@ -67,7 +67,12 @@ void main(List<String> arguments) {
   print(greeting);
   print(greeting.codeUnits);
 
-  //datatype keyword changing
+  //print with emojis
+  print('I \u2764 Dart\u0021');
+  print('I love \u{1F3AF}');
+
+  //datatype
+
   //there are two types of datatypes that is
   // 1. value type: which saves value
   // 2. reference type: saves pointer/refernce of actual value
