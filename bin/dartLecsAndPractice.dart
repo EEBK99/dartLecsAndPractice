@@ -66,4 +66,19 @@ void main(List<String> arguments) {
   var greeting = 'Assalam o Alaikum';
   print(greeting);
   print(greeting.codeUnits);
+
+  //datatype keyword changing
+  //there are two types of datatypes that is
+  // 1. value type: which saves value
+  // 2. reference type: saves pointer/refernce of actual value
+
+  // enum should be define in global scope... enum body contains list of constants
+
+  // continue is used to skip iteration of specific given cndition
+
+  // break jahan lagy wahan sy loop exit hojata hy
+
+  // foreach called in java/csahrp and for-in called in dart apply on collection or list
+
+  // for-each simplification myn inline function kar skty hein
 }
