@@ -81,4 +81,6 @@ void main(List<String> arguments) {
   // foreach called in java/csahrp and for-in called in dart apply on collection or list
 
   // for-each simplification myn inline function kar skty hein
+
+  // function jis parameter ko [] es myn likho tou wo optional hojata hy
 }
