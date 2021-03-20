@@ -16,6 +16,7 @@
 //   print(fullname('Haseeb', 'Khan', ''));
 // }
 
+// function jis parameter ko [] es myn likho tou wo optional hojata hy............................
 //making argument of function as default null by using [] but it will show null in output so we will make it better
 // String fullname(String first, String last, [String title]) {
 //   if (title != null) {

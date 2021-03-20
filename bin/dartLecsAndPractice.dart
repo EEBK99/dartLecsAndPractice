@@ -230,6 +230,4 @@ void main(List<String> arguments) {
   // for-each simplification myn inline function kar skty hein
   const mynumbersss2 = [1, 2, 3, 4, 5];
   mynumbersss2.forEach((numberelementttt) => print(numberelementttt));
-
-  // function jis parameter ko [] es myn likho tou wo optional hojata hy............................
 }
