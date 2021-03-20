@@ -1,6 +1,13 @@
 import 'dart:ffi';
 import 'dart:math';
 
+enum weather {
+  sunny,
+  snowy,
+  cloudy,
+  rainy,
+}
+
 void main(List<String> arguments) {
   print('Hello world!');
   // lec1
@@ -71,11 +78,83 @@ void main(List<String> arguments) {
   print('I \u2764 Dart\u0021');
   print('I love \u{1F3AF}');
 
-  //datatype
-
+  //DATATYPES...............................................
   //there are two types of datatypes that is
   // 1. value type: which saves value
   // 2. reference type: saves pointer/refernce of actual value
+
+  //var can be chnaged but with same datatype but in dynamic value can be chnaged with different datatypes..............................................
+  // var myv = 42;
+  // print(myv.runtimeType);
+  // myv = 'hello';
+  dynamic myvar = 42;
+  print(myvar.runtimeType);
+  myvar = 'hello';
+  print(myvar.runtimeType);
+  print(myvar);
+
+  //default to dynamic............................................
+  var v;
+  v = 33;
+  print(v);
+  v = 'hellov';
+  print(v);
+
+  //objects myn bhi value chnage hojati hy with different datatype................................
+  Object myobj = 333;
+  print(myobj);
+  myobj = 'helloobj';
+  print(myobj);
+
+  //boolean and equality...............................................
+  const value = (1 == 2);
+  print(value);
+  const value2 = !(1 == 2);
+  print(value2);
+
+  // logical AND --> && ....... OR --> ||
+  const animal = 'fox';
+  if (animal == 'cat' || animal == 'dog') {
+    print('animal is a house pet');
+  } else {
+    print('animal is not a house pet');
+  }
+
+  //else if chain..........................
+  const trafficlight = 'green';
+  var command = '';
+  if (trafficlight == 'red') {
+    command = 'stop';
+  } else if (trafficlight == 'yellow') {
+    command = 'slowdown';
+  } else if (trafficlight == 'green') {
+    command = 'go';
+  } else {
+    command = 'invalid color!';
+  }
+  print(command);
+
+  //switch..........................
+  const weather = 'snowy';
+  switch (weather) {
+    case 'sunny':
+      print('put on sun screen');
+      break;
+    case 'snowy':
+      print('get your skis');
+      break;
+    case 'cloudy':
+    case 'rain':
+      print('bring your umbrella');
+      break;
+    default:
+      print('stay home');
+  }
+
+  //ternary consition........................
+  const score = 88;
+  const message = (score >= 60) ? 'you passed' : 'you failed';
+  print(message);
 
   // enum should be define in global scope... enum body contains list of constants
 
