@@ -1,7 +1,8 @@
 import 'dart:ffi';
 import 'dart:math';
 
-enum weather {
+// in enum variable name should be start with upper letter
+enum Enumweather {
   sunny,
   snowy,
   cloudy,
@@ -157,14 +158,78 @@ void main(List<String> arguments) {
   print(message);
 
   // enum should be define in global scope... enum body contains list of constants
+  const enumweathervariable = Enumweather.cloudy;
+  switch (enumweathervariable) {
+    case Enumweather.sunny:
+      print('put on sun screen');
+      break;
+    case Enumweather.snowy:
+      print('get your skis');
+      break;
+    case Enumweather.cloudy:
+    case Enumweather.rainy:
+      print('bring your umbrella');
+      break;
+    default:
+      print('stay home');
+  }
 
-  // continue is used to skip iteration of specific given cndition
+  //while..................................
+  var sum = 1;
+  while (sum < 10) {
+    sum += 4;
+    print(sum);
+  }
 
-  // break jahan lagy wahan sy loop exit hojata hy
+  //do-while...............................
+  var sum2 = 1;
+  do {
+    sum2 += 4;
+    print(sum2);
+  } while (sum2 < 10);
 
-  // foreach called in java/csahrp and for-in called in dart apply on collection or list
+  //random numbers.........................
+  final random = Random();
+  while (random.nextInt(6) + 1 != 6) {
+    print('not a six');
+  }
+  print('its a six');
 
+  // continue is used to skip iteration of specific given condition..................
+  for (var i = 0; i < 5; i++) {
+    if (i == 4) {
+      continue;
+    }
+    print(i);
+  }
+
+  // break jahan lagy wahan sy loop exit hojata hy.........................
+  for (var i = 0; i < 5; i++) {
+    if (i == 4) {
+      break;
+    }
+    print(i);
+  }
+
+  // for-in and (foreach) apply on collection or list.....................
+  // for-in
+  const mynum = [11, 22, 33, 44, 55];
+  for (var nums in mynum) {
+    print(nums);
+  }
+  const mystring = 'I just started dart';
+  for (var codepoint in mystring.runes) {
+    print(String.fromCharCode(codepoint));
+  }
+
+  // for-each
+  const mynumbersss = [1, 2, 3, 4, 5];
+  mynumbersss.forEach((numberelement) {
+    print(numberelement);
+  });
   // for-each simplification myn inline function kar skty hein
+  const mynumbersss2 = [1, 2, 3, 4, 5];
+  mynumbersss2.forEach((numberelementttt) => print(numberelementttt));
 
-  // function jis parameter ko [] es myn likho tou wo optional hojata hy
+  // function jis parameter ko [] es myn likho tou wo optional hojata hy............................
 }
